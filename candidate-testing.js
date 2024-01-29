@@ -15,7 +15,6 @@ let questions = ["Who was the first American woman in space? ", "True or false: 
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   candidateName = input.question("Please enter your name: ");
@@ -30,13 +29,11 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers) {
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let correctCandidateAnswers = 0;
 for (let i = 0; i < questions.length; i++){
   if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
   console.log (`Correct! You answered ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
   correctCandidateAnswers += 1;
-  // console.log("line 38 correct answers: " + correctCandidateAnswers );
   } else {
   console.log (`Incorect! You answered ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
   // console.log("line 40 correct answers: " + correctCandidateAnswers);
