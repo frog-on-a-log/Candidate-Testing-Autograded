@@ -32,19 +32,21 @@ function gradeQuiz(candidateAnswers) {
   let correctCandidateAnswers = 0;
 for (let i = 0; i < questions.length; i++){
   if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
-  console.log (`Correct! You answered ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
+  console.log (`\nCorrect! You answered: \n${candidateAnswers[i]} and the correct answer is: \n${correctAnswers[i]}`);
   correctCandidateAnswers += 1;
   } else {
-  console.log (`Incorect! You answered ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
+  console.log (`\nIncorect! You answered: \n${candidateAnswers[i]} and the correct answer is: \n${correctAnswers[i]}`);
   // console.log("line 40 correct answers: " + correctCandidateAnswers);
 }}
 
 //TODO 3.2 use this variable to calculate the candidates score.
 let grade = (correctCandidateAnswers/questions.length) * 100; 
+console.log(`\n${correctCandidateAnswers} of ${questions.length} responses correct`);
+
 if (grade >= 80){
-  console.log(`Congrats! You have passed this test with a score of ${grade}%`);
+  console.log(`\nCongrats! You have passed this test with a score of ${grade}%`);
   } else {
-  console.log(`You have failed this test. You got a score of ${grade}% and you need at least 80% to pass!`);
+  console.log(`\nYou have failed this test. You got a score of ${grade}% and you need at least 80% to pass!`);
   }
 return grade;
 }
